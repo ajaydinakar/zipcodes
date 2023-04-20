@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class LocationController {
     @Autowired
-    LocationService service;
+    LocationService serviceWebClinet;
     @Autowired
-    LocationServiceRest serviceRest;
+    LocationServiceRest serviceRestTemplate;
 
 
     @GetMapping("/location/{country}/{postalcode}")
     public Location getLocationRest(@PathVariable("country") String country, @PathVariable("postalcode") String postalcode) {
-        return  serviceRest.getLocationFromRedis(country,postalcode);
+        return  serviceRestTemplate.getLocationFromRedis(country,postalcode);
     }
     // below one is non recommended approach through webclient as it is non reactive way
     @GetMapping("/locationV2/{country}/{postalcode}")
     public Location getLocation(@PathVariable("country") String country, @PathVariable("postalcode") String postalcode) {
-        return  service.getLocation(country,postalcode);
+        return  serviceWebClinet.getLocationFromRedis(country,postalcode);
     }
 
 }

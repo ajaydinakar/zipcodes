@@ -44,9 +44,9 @@ public class LocationService {
         }
         else
         {
-            getLocation(country,postalcode)  ;
-            location= dao.getObjJpa(postalcode);
-             return location.get();
+           Location location1= getLocation(country,postalcode)  ;
+            dao.saveJpa(location1);
+             return location1;
         }
     }
 
