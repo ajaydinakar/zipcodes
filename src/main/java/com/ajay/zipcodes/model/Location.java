@@ -17,6 +17,7 @@ import java.util.List;
 @Builder
 @RedisHash("Location")
 public class Location implements Serializable {
+    private static final long serialVersionUID = 643513765332481699L;
     @JsonProperty("post code")
             @Id
     String postalcode;
@@ -25,5 +26,6 @@ public class Location implements Serializable {
     String abbrevation;
     @JsonProperty("places")
     List<Place> places;
+
 
 }

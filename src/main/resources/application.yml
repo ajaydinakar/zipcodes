@@ -3,9 +3,12 @@ server:
 baseurl: https://api.zippopotam.us/
 spring:
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
-    password :  password
+    password: password
+    max_active: 30
+    max_idle: 8
+    min_idle: 0
     lettuce:
       shutdown-timeout: 3000
       pool:

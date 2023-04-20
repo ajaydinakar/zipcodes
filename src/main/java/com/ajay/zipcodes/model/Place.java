@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Place implements Serializable {
+    private static final long serialVersionUID = -2297165173615881318L;
     @JsonProperty("place name")
     String name;
     String longitude;
