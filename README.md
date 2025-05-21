@@ -1,6 +1,5 @@
 # zipcodes
 
-# zipcodes Repository Overview
 
 ## Table of Contents
 - [Introduction](#introduction)
